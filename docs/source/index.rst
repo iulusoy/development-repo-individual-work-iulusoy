@@ -15,5 +15,9 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+   test.md
+   README_link.md
    modules.rst
+   LICENSE_link.md
+
 
