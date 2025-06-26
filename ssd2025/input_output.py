@@ -4,13 +4,22 @@ from pathlib import Path
 
 
 class InputOutput:
+    """Class for handling input and output operations for CSV and NumPy files."""
+
     def __init__(self, input_path: Path, output_path: Path):
+        """Initializes the InputOutput class with input and output file paths.
+
+        Args:
+            input_path (Path): Path to the input file.
+            output_path (Path): Path to the output file.
+        """
         self.input_path = input_path
         self.output_path = output_path
         self.check_file_exists()
 
     def check_file_exists(self):
-        """Checks if the input file exists."""
+        """Checks if the input file exists and if the output file does not exist.
+        Further, it checks if the output directory exists."""
         if not self.input_path.exists():
             raise FileNotFoundError(f"The input file {self.input_path} does not exist.")
         # we should also check that the output path directory
